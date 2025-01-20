@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti Tiwari</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #000;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        /* Hamburger Menu */
+        .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    gap: 3rem;
+}
+
+.about-image {
+    flex-shrink: 0;
+    text-align: center; /* Center-align image and icons */
+    width: 400px; /* Fixed width */
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Adjust image size as needed */
+    border-radius: 15px;
+    border: 2px solid #ddd; /* Optional border */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons below the image */
+    gap: 20px; /* Add spacing between icons */
+    margin-top: 15px; /* Space between the image and icons */
+    margin-right: 35%;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease;
+    color: #555; /* Default icon color */
+}
+
+.social-icons a.linkedin:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-icons a.github:hover {
+    color: #000; /* GitHub Black */
+}
+
+.social-icons a.twitter:hover {
+    color: #1da1f2; /* Twitter Blue */
+}
+.social-icons a.instagram:hover {
+    color: #E4405F; /* Instagram Pink */
+}
+
+.social-icons a.youtube:hover {
+    color: #FF0000; /* YouTube Red */
+}
+
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: transparent;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #808080;
+        }
+
+        .download-resume {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: #000;
+            color: #fff !important;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .download-resume:hover {
+            background-color: #808080;
+            color: #fff !important;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            border-radius: 5px;
+        }
+        /* Navbar - Mobile View */
+.nav-links {
+    display: none; /* Hide nav-links by default for small screens */
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%; /* Place below the navbar */
+    right: 0;
+    width: 100%; /* Take full width of the screen */
+    z-index: 1000;
+    align-items: center; /* Center-align the links */
+}
+
+.nav-links.active {
+    display: flex; /* Show the nav-links when active */
+}
+
+.hamburger {
+    display: flex; /* Show hamburger icon on small screens */
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Keep navbar horizontal on larger screens */
+        position: static; /* Reset position for larger screens */
+        flex-direction: row;
+        background-color: transparent;
+        width: auto; /* Reset width */
+        align-items: center;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger icon on larger screens */
+    }
+}
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 0;
+        }
+
+        .hero h2 {
+            font-size: 5.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #808080;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 2rem;
+            gap: 3rem;
+        }
+
+        .about-image {
+            flex-shrink: 0;
+            width: 400px; /* Fixed width */
+            height: 350px; /* Fixed height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            border-radius: 15px;
+        }
+
+        .about-description {
+            flex: 1.5;
+        }
+
+        .description-box {
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            height: 100%;
+        }
+
+        .description-box h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .description-box p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .about-description {
+                flex: none;
+                width: 100%;
+            }
+
+            .about-image {
+                width: 100%;
+                text-align: center;
+                height: 250px; /* Smaller image container height on mobile */
+            }
+
+            .about-img {
+                width: 100%;
+                height: auto;
+                max-width: 500px;
+            }
+        }
+        #projects {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid layout for responsiveness */
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #808080;
+        }
+
+        .project-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        #skills {
+            padding: 4rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-category img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .skills-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-description {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        #achievements {
+            padding: 4rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .achievements-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust grid layout */
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .achievement-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            overflow: hidden; /* Ensure no overflow from images */
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensures the full image is visible, without cropping */
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-description {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .achievements-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        #certificates {
+            padding: 4rem 0;
+            background-color: #f4f4f4;
+        }
+
+        .certificates-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .certificate-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .certificate-img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure the entire certificate image is shown */
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-description {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .certificates-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    /* Contact Section */
+/* Contact Section */
+/* General Section Styling */
+#contact {
+    padding: 4rem 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Title Styling */
+#contact h2 {
+    font-size: 4em;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+/* Form Container Styling */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width:80%;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Label Styling */
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Input & Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Focus Effect for Input & Textarea */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit Button Styling */
+.btn {
+    width: 100%;
+    padding: 0.70rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.0rem;
+}
+
+.btn:hover {
+    background-color: #808080;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container1">
+                <h1 class="logo">Shruti Tiwari</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="images\Shruti (Final) Resume.pdf" class="download-resume" download>Download Resume</a></li>
+                </ul>
+                <!-- Hamburger icon -->
+                <div class="hamburger" id="hamburger-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container1">
+            <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: center; ">
+                <h2>Hey, I'm Shruti</h2>
+                <p>A Java Developer and also have knowledge of machine learning and passionate to learn and adapt new things.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shruti7617/" class="linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/shruti-tiwari761" class="github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/ShrutiTiwari768" class="twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+            
+                    <a href="https://www.youtube.com/@shrutitiwari9461" class="youtube" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="flex: 1; text-align: right; position: relative;">
+                <img src="images\Untitled design.png" alt="Shruti's Image"
+                     style="width: 100%; height: auto; max-width: 450px; border: none; border-radius: 10%; opacity: 1;">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <!-- Image Section -->
+            <div class="about-image" style="text-align: center;">
+                <img src="images\s1.jpg" alt="Shruti's Image" class="about-img">
+            </div>
+    
+            <!-- Description Section -->
+            <div class="about-description">
+                <div class="description-box">
+                    <h2>About Me !!!</h2>
+                    <p>
+                        Hi, I am a passionate Java Developer with experience in building robust software solutions. Along with my expertise in Java, I also have a strong knowledge of Machine Learning and a constant eagerness to learn new technologies and adapt to challenges.
+    
+                        In my academic journey, I have been the 3rd and 4th semester branch topper, showcasing my dedication and hard work. Outside of academics, I possess sketching skills, adding a creative flair to my pursuits.
+    
+                        During my school years, I was honored to secure a national-level silver medal in long jump at Delhi AHPS School, became the national-level champion in the Maths Olympiad, and also earned the title of state-level science champion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2 align="center" style="font-size: 4.5em;"> Skills </h2>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skills-category">
+                <h3 class="skills-title">Programming Languages</h3>
+                <div>
+                    <img src="images\c1.png" alt="C Language">
+                    <img src="images\c++1.png" alt="C++ Language">
+                    <img src="images\java1.jpg" alt="Java Language">
+                    <img src="images\python1.png" alt="Python Language">
+                </div>
+            </div>
+
+            <!-- Frontend Languages -->
+            <div class="skills-category">
+                <h3 class="skills-title">Frontend Languages</h3>
+                <div>
+                    <img src="images\html1.png" alt="HTML">
+                    <img src="images\css1.png" alt="CSS">
+                    <img src="images\js1.png" alt="JavaScript">
+                </div>
+            </div>
+
+            <!-- Backend Framework -->
+            <div class="skills-category">
+                <h3 class="skills-title">Backend Framework</h3>
+                <div>
+                    <img src="images\django1.png" alt="Django">
+                </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skills-category">
+                <h3 class="skills-title">Database</h3>
+                <div>
+                    <img src="images\mysql1.png" alt="MySQL">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2 align="center" style="font-size: 4.5em;"> My Projects </h2>
+        <br>
+        <div class="projects-container">
+           
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="images\KBC.jpg" alt="Project 1" class="project-img">
+                <h3 class="project-title">KBC QUIZ GAME</h3>
+                <p class="project-description">Developed an interactive KBC-style quiz game to enhance user engagement, foster learning, and deliver an enjoyable gaming experience.</p>
+                <a href="https://github.com/shruti-tiwari761/KBC-Quiz-Game" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> Visit GitHub
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="images\DSA.png" alt="Project 2" class="project-img">
+                <h3 class="project-title">DSA Implementation in C</h3>
+                <p class="project-description">Implemented all sorting algorithms, performed linked list and array operations to strengthen data structure fundamentals and optimize computational efficiency.</p>
+                <a href="https://github.com/shruti-tiwari761/Sorting-Algorithm-DSA-using-C" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> Visit GitHub
+                </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="images\exam.png" alt="Project 3" class="project-img">
+                <h3 class="project-title">Exam Seating Management System</h3>
+                <p class="project-description">Designed a user-friendly system to manage and allocate exam seating arrangements efficiently, ensuring error-free and organized seating plans.</p>
+                <a href="https://github.com/shruti-tiwari761/Exam_Seating_Management_System" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> Visit GitHub
+                </a>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="images\f1.jpeg" alt="Project 4" class="project-img">
+                <h3 class="project-title">File Encryption using Java</h3>
+                <p class="project-description">Developed a secure file encryption system integrated with email-based OTP verification to ensure data confidentiality and robust user authentication.</p>
+                <a href="https://github.com/shruti-tiwari761/java_file_encryption" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> Visit GitHub
+                </a>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card">
+                <img src="images\ai.jpeg" alt="Project 5" class="project-img">
+                <h3 class="project-title">Ai Enhaced Career Guidance</h3>
+                <p class="project-description">Built a smart career guidance platform leveraging machine learning to provide personalized recommendations and insights, enabling informed career decisions.</p>
+                <a href="https://github.com/shruti-tiwari761/Ai-enhanced-career-guidance-system-using-machine-learning-and-django" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> Visit GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="achievements">
+        <h2 align="center" style="font-size: 4.5em;">Some Achievements</h2>
+        <br>
+        <div class="achievements-container">
+            <!-- Achievement 1 -->
+            <div class="achievement-card">
+                <img src="images\ac1.jpg" alt="Achievement 1" class="achievement-img">
+                <p class="achievement-description">During the 3rd semester of my undergraduate studies, I secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
+            </div>
+            <!-- Achievement 2 -->
+            <div class="achievement-card">
+                <img src="images\ac2.jpg" alt="Achievement 2" class="achievement-img">
+                <p class="achievement-description">During the 4th semester of my undergraduate studies, I secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
+            </div>
+
+        </div>
+    </section>
+    <section id="certifications">
+        <h2 align="center" style="font-size: 4.5em; margin-bottom: 2rem;">Certificates</h2>
+        <div class="certificates-container">
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+                <img src="images\shre1.jpg" alt="Certificate 1" class="certificate-img">
+                <p class="certificate-description">Certified in Java Programming - Sheryians Coding School</p>
+            </div>
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+                <img src="images\shre2.jpg" alt="Certificate 2" class="certificate-img">
+                <p class="certificate-description">Certified in Data Structures And Algorithms (Java) - Sheryians Coding School</p>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="images\u1.jpg" alt="Certificate 3" class="certificate-img">
+                <p class="certificate-description">Create a GUI with Python - Udemy</p>
+            </div>
+            <div class="certificate-card">
+                <img src="images\ms1.jpg" alt="Certificate 2" class="certificate-img">
+                <p class="certificate-description">Git and GitHub - Microsoft Learn Student Ambassador</p>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="images\hacker.jpeg" alt="Certificate 3" class="certificate-img">
+                <p class="certificate-description">Java (Basic) - Hacker Rank</p>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="images\hacker2.jpeg" alt="Certificate 3" class="certificate-img">
+                <p class="certificate-description">Problem Solving - Hacker Rank</p>
+            </div>
+            <div class="certificate-card">
+                <img src="images\flipcaart.jpeg" alt="Certificate 3" class="certificate-img">
+                <p class="certificate-description">Certificate of Participation - Unstop</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="container1">
+            <!-- Contact Form Container -->
+            <div class="contact-container">
+                <form action="https://formsubmit.co/shrutitiwari4618@gmail.com" method="post">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <!-- Message Field -->
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                    </div>
+    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer align="center">
+        <p>Made with ❤️ by Shruti 😊</p>
+    </footer>
+    
+
+    <!-- JavaScript to Toggle the Navbar -->
+    <script>
+        document.getElementById("hamburger-icon").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
