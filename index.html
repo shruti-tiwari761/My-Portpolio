@@ -608,7 +608,29 @@
         width: 100%;
     }
 }
+.content-left {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
 
+    .content-right {
+        flex: 1;
+        text-align: right;
+        position: relative;
+    }
+
+    .content-right img {
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+        border: none;
+        border-radius: 10%;
+        opacity: 1;
+    }
 
     </style>
 </head>
@@ -640,7 +662,7 @@
 
     <section id="home" class="hero">
         <div class="container1">
-            <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: center; ">
+            <div class="content-left">
                 <h2>Hey, I'm Shruti</h2>
                 <p>A Java Developer and also have knowledge of machine learning and passionate to learn and adapt new things.</p>
                 <div class="social-icons">
@@ -653,16 +675,14 @@
                     <a href="https://x.com/ShrutiTiwari768" class="twitter" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
-            
                     <a href="https://www.youtube.com/@shrutitiwari9461" class="youtube" target="_blank">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
-            
-            <div style="flex: 1; text-align: right; position: relative;">
-                <img src="images\Untitled design.png" alt="Shruti's Image"
-                     style="width: 100%; height: auto; max-width: 450px; border: none; border-radius: 10%; opacity: 1;">
+    
+            <div class="content-right">
+                <img src="images/Untitled design.png" alt="Shruti's Image">
             </div>
         </div>
     </section>
