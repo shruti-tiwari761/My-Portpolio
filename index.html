@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shruti Tiwari</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CSS -->
+    <title>Shruti Tiwari</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -34,6 +36,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -44,6 +47,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -54,6 +58,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -65,6 +70,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -87,44 +93,54 @@
         .slide-in-right {
             animation: slideInRight 0.8s ease-out forwards;
         }
+
         /* Hamburger Menu */
         .about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 2rem;
-    gap: 3rem;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 2rem;
+            gap: 3rem;
+        }
 
-.about-image {
-    flex-shrink: 0;
-    text-align: center; /* Center-align image and icons */
-    width: 400px; /* Fixed width */
-}
+        .about-image {
+            flex-shrink: 0;
+            text-align: center;
+            /* Center-align image and icons */
+            width: 400px;
+            /* Fixed width */
+        }
 
-.about-img {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* Adjust image size as needed */
-    border-radius: 15px;
-    border: 2px solid #ddd; /* Optional border */
-}
+        .about-img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            /* Adjust image size as needed */
+            border-radius: 15px;
+            border: 2px solid #ddd;
+            /* Optional border */
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center; /* Center icons below the image */
-    gap: 20px; /* Add spacing between icons */
-    margin-top: 15px; /* Space between the image and icons */
-    margin-right: 35%;
-}
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            /* Center icons below the image */
+            gap: 20px;
+            /* Add spacing between icons */
+            margin-top: 15px;
+            /* Space between the image and icons */
+            margin-right: 35%;
+        }
 
         .social-icons a {
             text-decoration: none;
-            font-size: 24px; /* Icon size */
+            font-size: 24px;
+            /* Icon size */
             transition: all 0.3s ease;
-            color: #555; /* Default icon color */
+            color: #555;
+            /* Default icon color */
             display: inline-block;
         }
 
@@ -132,24 +148,30 @@
             transform: translateY(-5px) scale(1.2);
         }
 
-.social-icons a.linkedin:hover {
-    color: #0077b5; /* LinkedIn Blue */
-}
+        .social-icons a.linkedin:hover {
+            color: #0077b5;
+            /* LinkedIn Blue */
+        }
 
-.social-icons a.github:hover {
-    color: #000; /* GitHub Black */
-}
+        .social-icons a.github:hover {
+            color: #000;
+            /* GitHub Black */
+        }
 
-.social-icons a.twitter:hover {
-    color: #1da1f2; /* Twitter Blue */
-}
-.social-icons a.instagram:hover {
-    color: #E4405F; /* Instagram Pink */
-}
+        .social-icons a.twitter:hover {
+            color: #1da1f2;
+            /* Twitter Blue */
+        }
 
-.social-icons a.youtube:hover {
-    color: #FF0000; /* YouTube Red */
-}
+        .social-icons a.instagram:hover {
+            color: #E4405F;
+            /* Instagram Pink */
+        }
+
+        .social-icons a.youtube:hover {
+            color: #FF0000;
+            /* YouTube Red */
+        }
 
         .container1 {
             display: flex;
@@ -274,43 +296,54 @@
             background-color: #333;
             transform: scaleX(1.1);
         }
+
         /* Navbar - Mobile View */
-.nav-links {
-    display: none; /* Hide nav-links by default for small screens */
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 100%; /* Place below the navbar */
-    right: 0;
-    width: 100%; /* Take full width of the screen */
-    z-index: 1000;
-    align-items: center; /* Center-align the links */
-}
+        .nav-links {
+            display: none;
+            /* Hide nav-links by default for small screens */
+            flex-direction: column;
+            background-color: #fff;
+            position: absolute;
+            top: 100%;
+            /* Place below the navbar */
+            right: 0;
+            width: 100%;
+            /* Take full width of the screen */
+            z-index: 1000;
+            align-items: center;
+            /* Center-align the links */
+        }
 
-.nav-links.active {
-    display: flex; /* Show the nav-links when active */
-}
+        .nav-links.active {
+            display: flex;
+            /* Show the nav-links when active */
+        }
 
-.hamburger {
-    display: flex; /* Show hamburger icon on small screens */
-    justify-content: center;
-    align-items: center;
-}
+        .hamburger {
+            display: flex;
+            /* Show hamburger icon on small screens */
+            justify-content: center;
+            align-items: center;
+        }
 
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex; /* Keep navbar horizontal on larger screens */
-        position: static; /* Reset position for larger screens */
-        flex-direction: row;
-        background-color: transparent;
-        width: auto; /* Reset width */
-        align-items: center;
-    }
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                /* Keep navbar horizontal on larger screens */
+                position: static;
+                /* Reset position for larger screens */
+                flex-direction: row;
+                background-color: transparent;
+                width: auto;
+                /* Reset width */
+                align-items: center;
+            }
 
-    .hamburger {
-        display: none; /* Hide hamburger icon on larger screens */
-    }
-}
+            .hamburger {
+                display: none;
+                /* Hide hamburger icon on larger screens */
+            }
+        }
 
         /* Hero Section */
         .hero {
@@ -395,8 +428,10 @@
 
         .about-image {
             flex-shrink: 0;
-            width: 400px; /* Fixed width */
-            height: 350px; /* Fixed height */
+            width: 400px;
+            /* Fixed width */
+            height: 350px;
+            /* Fixed height */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -405,7 +440,8 @@
         .about-img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the container */
+            object-fit: cover;
+            /* Ensures the image covers the container */
             border-radius: 15px;
             transition: all 0.4s ease;
             cursor: pointer;
@@ -463,7 +499,8 @@
             .about-image {
                 width: 100%;
                 text-align: center;
-                height: 250px; /* Smaller image container height on mobile */
+                height: 250px;
+                /* Smaller image container height on mobile */
             }
 
             .about-img {
@@ -472,6 +509,7 @@
                 max-width: 500px;
             }
         }
+
         #projects {
             padding: 4rem 0;
             background-color: #f9f9f9;
@@ -485,7 +523,8 @@
 
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid layout for responsiveness */
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            /* Grid layout for responsiveness */
             gap: 2rem;
             width: 100%;
             max-width: 1200px;
@@ -650,6 +689,7 @@
                 justify-content: center;
             }
         }
+
         #skills {
             padding: 4rem 0;
             background-color: #f4f4f4;
@@ -734,6 +774,7 @@
                 grid-template-columns: 1fr;
             }
         }
+
         #achievements {
             padding: 4rem 0;
             background-color: #f4f4f4;
@@ -747,7 +788,8 @@
 
         .achievements-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust grid layout */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            /* Adjust grid layout */
             gap: 2rem;
             width: 100%;
             max-width: 1200px;
@@ -815,6 +857,7 @@
                 grid-template-columns: 1fr;
             }
         }
+
         #certificates {
             padding: 4rem 0;
             background-color: #f4f4f4;
@@ -828,7 +871,8 @@
 
         .certificates-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            /* Responsive grid layout */
             gap: 2rem;
             width: 100%;
             max-width: 1200px;
@@ -900,184 +944,187 @@
                 grid-template-columns: 1fr;
             }
         }
-    /* Contact Section */
-/* Contact Section */
-/* General Section Styling */
-#contact {
-    padding: 4rem 0;
-    background-color: #f4f4f4;
-    text-align: center;
-}
 
-/* Title Styling */
-#contact h2 {
-    font-size: 4em;
-    margin-bottom: 2rem;
-    color: #000;
-    transition: all 0.3s ease;
-}
+        /* Contact Section */
+        /* Contact Section */
+        /* General Section Styling */
+        #contact {
+            padding: 4rem 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
-#contact h2:hover {
-    transform: scale(1.05);
-    letter-spacing: 2px;
-}
+        /* Title Styling */
+        #contact h2 {
+            font-size: 4em;
+            margin-bottom: 2rem;
+            color: #000;
+            transition: all 0.3s ease;
+        }
 
-h2[align="center"] {
-    transition: all 0.3s ease;
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-}
+        #contact h2:hover {
+            transform: scale(1.05);
+            letter-spacing: 2px;
+        }
 
-h2[align="center"]:hover {
-    transform: scale(1.05);
-    letter-spacing: 2px;
-}
+        h2[align="center"] {
+            transition: all 0.3s ease;
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
 
-/* Form Container Styling */
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width:80%;
-}
+        h2[align="center"]:hover {
+            transform: scale(1.05);
+            letter-spacing: 2px;
+        }
 
-/* Form Group Styling */
-.form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-}
+        /* Form Container Styling */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
 
-/* Label Styling */
-.form-group label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
+        /* Form Group Styling */
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
 
-/* Input & Textarea Styling */
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #000;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    background-color: #fff;
-}
+        /* Label Styling */
+        .form-group label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
 
-/* Focus Effect for Input & Textarea */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #000;
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
+        /* Input & Textarea Styling */
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
 
-.form-group input:hover,
-.form-group textarea:hover {
-    border-color: #333;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+        /* Focus Effect for Input & Textarea */
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #000;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
 
-/* Submit Button Styling - Contact Form */
-#contact .btn {
-    width: 100%;
-    padding: 0.70rem;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.0rem;
-    position: relative;
-    overflow: hidden;
-}
+        .form-group input:hover,
+        .form-group textarea:hover {
+            border-color: #333;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
 
-#contact .btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
+        /* Submit Button Styling - Contact Form */
+        #contact .btn {
+            width: 100%;
+            padding: 0.70rem;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.0rem;
+            position: relative;
+            overflow: hidden;
+        }
 
-#contact .btn:hover::before {
-    width: 300px;
-    height: 300px;
-}
+        #contact .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
 
-#contact .btn:hover {
-    background-color: #333;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+        #contact .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .contact-container {
-        width: 90%;
-        padding: 1.5rem;
-    }
+        #contact .btn:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    .btn {
-        width: 100%;
-    }
-}
-.content-left {
-        flex: 1;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10px;
-    }
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 90%;
+                padding: 1.5rem;
+            }
 
-    .content-right {
-        flex: 1;
-        text-align: right;
-        position: relative;
-    }
+            .btn {
+                width: 100%;
+            }
+        }
+
+        .content-left {
+            flex: 1;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .content-right {
+            flex: 1;
+            text-align: right;
+            position: relative;
+        }
 
         .content-right img {
-        width: 100%;
-        height: auto;
-        max-width: 450px;
-        border: none;
-        border-radius: 10%;
-        opacity: 1;
-        transition: all 0.4s ease;
-        animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-        0%, 100% {
-            transform: translateY(0px);
+            width: 100%;
+            height: auto;
+            max-width: 450px;
+            border: none;
+            border-radius: 10%;
+            opacity: 1;
+            transition: all 0.4s ease;
+            animation: float 3s ease-in-out infinite;
         }
-        50% {
-            transform: translateY(-20px);
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
-    }
 
-    .content-right img:hover {
-        transform: scale(1.05) translateY(-10px);
-        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
-    }
-
-
+        .content-right img:hover {
+            transform: scale(1.05) translateY(-10px);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
     </style>
 </head>
 
@@ -1110,7 +1157,8 @@ h2[align="center"]:hover {
         <div class="container1">
             <div class="content-left">
                 <h2>Hey, I'm Shruti</h2>
-                <p>A Java Developer and also have knowledge of machine learning and passionate to learn and adapt new things.</p>
+                <p>A Java Developer and also have knowledge of machine learning and passionate to learn and adapt new
+                    things.</p>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/shruti7617/" class="linkedin" target="_blank">
                         <i class="fab fa-linkedin"></i>
@@ -1126,7 +1174,7 @@ h2[align="center"]:hover {
                     </a>
                 </div>
             </div>
-    
+
             <div class="content-right">
                 <img src="images/1.png" alt="Shruti's Image">
             </div>
@@ -1139,23 +1187,29 @@ h2[align="center"]:hover {
             <div class="about-image" style="text-align: center;">
                 <img src="images\s1.jpg" alt="Shruti's Image" class="about-img">
             </div>
-    
+
             <!-- Description Section -->
             <div class="about-description">
                 <div class="description-box">
                     <h2>About Me !!!</h2>
                     <p>
-                        Hi, I am a passionate Java Developer with experience in building robust software solutions. Along with my expertise in Java, I also have a strong knowledge of Machine Learning and a constant eagerness to learn new technologies and adapt to challenges.
-    
-                        In my academic journey, I have been the 3rd and 4th semester branch topper, showcasing my dedication and hard work. Outside of academics, I possess sketching skills, adding a creative flair to my pursuits.
-    
-                        During my school years, I was honored to secure a national-level silver medal in long jump at Delhi AHPS School, became the national-level champion in the Maths Olympiad, and also earned the title of state-level science champion.
+                        Hi, I am a passionate Java Developer with experience in building robust software solutions.
+                        Along with my expertise in Java, I also have a strong knowledge of Machine Learning and a
+                        constant eagerness to learn new technologies and adapt to challenges.
+
+                        In my academic journey, I have been the 3rd and 4th semester branch topper, showcasing my
+                        dedication and hard work. Outside of academics, I possess sketching skills, adding a creative
+                        flair to my pursuits.
+
+                        During my school years, I was honored to secure a national-level silver medal in long jump at
+                        Delhi AHPS School, became the national-level champion in the Maths Olympiad, and also earned the
+                        title of state-level science champion.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="skills">
         <h2 align="center" style="font-size: 4.5em;"> Skills </h2>
         <div class="skills-container">
@@ -1185,6 +1239,8 @@ h2[align="center"]:hover {
                 <h3 class="skills-title">Backend Framework</h3>
                 <div>
                     <img src="images\django1.png" alt="Django">
+                    <img src="images\hibernate_logo.png" alt="Hibernate">
+                    <img src="images\java_servlet_logo.png" alt="Java Servlet">
                 </div>
             </div>
 
@@ -1196,6 +1252,13 @@ h2[align="center"]:hover {
                 </div>
             </div>
 
+            <div class="skills-category">
+                <h3 class="skills-title">AI & Data Science</h3>
+                <div>
+                    <img src="images\ml_bg_logo.png" alt="Machine Learning">
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1204,7 +1267,7 @@ h2[align="center"]:hover {
         <h2 align="center" style="font-size: 4.5em;"> My Projects </h2>
         <br>
         <div class="projects-container">
-           
+
             <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-img-container">
@@ -1212,7 +1275,8 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">KBC QUIZ GAME</h3>
-                    <p class="project-description">Developed an interactive KBC-style quiz game to enhance user engagement, foster learning, and deliver an enjoyable gaming experience.</p>
+                    <p class="project-description">Developed an interactive KBC-style quiz game to enhance user
+                        engagement, foster learning, and deliver an enjoyable gaming experience.</p>
                     <a href="https://github.com/shruti-tiwari761/KBC-Quiz-Game" class="project-link" target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
@@ -1226,8 +1290,10 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">DSA Implementation in C</h3>
-                    <p class="project-description">Implemented all sorting algorithms, performed linked list and array operations to strengthen data structure fundamentals and optimize computational efficiency.</p>
-                    <a href="https://github.com/shruti-tiwari761/Sorting-Algorithm-DSA-using-C" class="project-link" target="_blank">
+                    <p class="project-description">Implemented all sorting algorithms, performed linked list and array
+                        operations to strengthen data structure fundamentals and optimize computational efficiency.</p>
+                    <a href="https://github.com/shruti-tiwari761/Sorting-Algorithm-DSA-using-C" class="project-link"
+                        target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
                     </a>
@@ -1240,8 +1306,10 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Exam Seating Management System</h3>
-                    <p class="project-description">Designed a user-friendly system to manage and allocate exam seating arrangements efficiently, ensuring error-free and organized seating plans.</p>
-                    <a href="https://github.com/shruti-tiwari761/Exam_Seating_Management_System" class="project-link" target="_blank">
+                    <p class="project-description">Designed a user-friendly system to manage and allocate exam seating
+                        arrangements efficiently, ensuring error-free and organized seating plans.</p>
+                    <a href="https://github.com/shruti-tiwari761/Exam_Seating_Management_System" class="project-link"
+                        target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
                     </a>
@@ -1254,8 +1322,10 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">File Encryption using Java</h3>
-                    <p class="project-description">Developed a secure file encryption system integrated with email-based OTP verification to ensure data confidentiality and robust user authentication.</p>
-                    <a href="https://github.com/shruti-tiwari761/java_file_encryption" class="project-link" target="_blank">
+                    <p class="project-description">Developed a secure file encryption system integrated with email-based
+                        OTP verification to ensure data confidentiality and robust user authentication.</p>
+                    <a href="https://github.com/shruti-tiwari761/java_file_encryption" class="project-link"
+                        target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
                     </a>
@@ -1268,8 +1338,10 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Ai Enhaced Career Guidance</h3>
-                    <p class="project-description">Built a smart career guidance platform leveraging machine learning to provide personalized recommendations and insights, enabling informed career decisions.</p>
-                    <a href="https://github.com/shruti-tiwari761/Ai-enhanced-career-guidance-system-using-machine-learning-and-django" class="project-link" target="_blank">
+                    <p class="project-description">Built a smart career guidance platform leveraging machine learning to
+                        provide personalized recommendations and insights, enabling informed career decisions.</p>
+                    <a href="https://github.com/shruti-tiwari761/Ai-enhanced-career-guidance-system-using-machine-learning-and-django"
+                        class="project-link" target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
                     </a>
@@ -1282,9 +1354,11 @@ h2[align="center"]:hover {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Indian Sign Language Text/Speech Conversion </h3>
-                    <p class="project-description">Developed a website with backend integrating YOLO for sign gesture recognition, APIs converting gestures to text, and Google's gTTS
+                    <p class="project-description">Developed a website with backend integrating YOLO for sign gesture
+                        recognition, APIs converting gestures to text, and Google's gTTS
                         for real-time speech, supported by efficient SQLite data handling.</p>
-                    <a href="https://github.com/shruti-tiwari761/Ai-enhanced-career-guidance-system-using-machine-learning-and-django" class="project-link" target="_blank">
+                    <a href="https://github.com/shruti-tiwari761/Ai-enhanced-career-guidance-system-using-machine-learning-and-django"
+                        class="project-link" target="_blank">
                         <i class="fab fa-github"></i>
                         <span>View on GitHub</span>
                     </a>
@@ -1297,21 +1371,17 @@ h2[align="center"]:hover {
         <br>
         <div class="achievements-container">
             <!-- Achievement 1 -->
-            <div class="achievement-card">
-                <div class="achievement-img-container">
-                    <img src="images\ac1.jpg" alt="Achievement 1" class="achievement-img">
-                </div>
-                <div class="achievement-content">
-                    <p class="achievement-description">During the 3rd semester of my undergraduate studies, I secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
-                </div>
-            </div>
+
             <!-- Achievement 2 -->
             <div class="achievement-card">
                 <div class="achievement-img-container">
-                    <img src="images\ac2.jpg" alt="Achievement 2" class="achievement-img">
+                    <img src="images\7th_sem.jpeg" alt="Achievement 2" class="achievement-img">
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">During the 4th semester of my undergraduate studies, I secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
+                    <p class="achievement-description">During the 7th semester of my undergraduate studies, I secured
+                        the top position in my branch, demonstrating consistent academic excellence and a strong grasp
+                        of core subjects. This achievement reflects my dedication, effective time management, and
+                        ability to excel in challenging coursework. </p>
                 </div>
             </div>
             <div class="achievement-card">
@@ -1319,15 +1389,44 @@ h2[align="center"]:hover {
                     <img src="images\ac3.jpg" alt="Achievement 3" class="achievement-img">
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">During the 5th semester of my undergraduate studies, I secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
+                    <p class="achievement-description">During the 5th semester of my undergraduate studies, I secured
+                        the top position in my branch, demonstrating consistent academic excellence and a strong grasp
+                        of core subjects. This achievement reflects my dedication, effective time management, and
+                        ability to excel in challenging coursework. </p>
                 </div>
             </div>
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="images\ac2.jpg" alt="Achievement 2" class="achievement-img">
+                </div>
+                <div class="achievement-content">
+                    <p class="achievement-description">During the 4th semester of my undergraduate studies, I secured
+                        the top position in my branch, demonstrating consistent academic excellence and a strong grasp
+                        of core subjects. This achievement reflects my dedication, effective time management, and
+                        ability to excel in challenging coursework. </p>
+                </div>
+            </div>
+
             <div class="achievement-card">
                 <div class="achievement-img-container">
                     <img src="images\ac4.jpg" alt="Achievement 4" class="achievement-img">
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">Branch Topper Award for 4th sem for securing secured the top position in my branch, demonstrating consistent academic excellence and a strong grasp of core subjects. This achievement reflects my dedication, effective time management, and ability to excel in challenging coursework. </p>
+                    <p class="achievement-description">Branch Topper Award for 4th sem for securing secured the top
+                        position in my branch, demonstrating consistent academic excellence and a strong grasp of core
+                        subjects. This achievement reflects my dedication, effective time management, and ability to
+                        excel in challenging coursework. </p>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-img-container">
+                    <img src="images\ac1.jpg" alt="Achievement 1" class="achievement-img">
+                </div>
+                <div class="achievement-content">
+                    <p class="achievement-description">During the 3rd semester of my undergraduate studies, I secured
+                        the top position in my branch, demonstrating consistent academic excellence and a strong grasp
+                        of core subjects. This achievement reflects my dedication, effective time management, and
+                        ability to excel in challenging coursework. </p>
                 </div>
             </div>
 
@@ -1336,7 +1435,10 @@ h2[align="center"]:hover {
                     <img src="images\national.jpg" alt="Achievement 5" class="achievement-img">
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">I was awarded the Certificate of Excellence for securing the 1st position at the National Level in the AHPS Maths Olympiad 2015-16. This achievement reflects my strong mathematical aptitude, analytical thinking, and problem-solving skills. The certificate was issued by Academic Heights Public School, Timrani, Madhya Pradesh, on 4th January 2016. </p>
+                    <p class="achievement-description">I was awarded the Certificate of Excellence for securing the 1st
+                        position at the National Level in the AHPS Maths Olympiad 2015-16. This achievement reflects my
+                        strong mathematical aptitude, analytical thinking, and problem-solving skills. The certificate
+                        was issued by Academic Heights Public School, Timrani, Madhya Pradesh, on 4th January 2016. </p>
                 </div>
             </div>
             <div class="achievement-card">
@@ -1344,7 +1446,8 @@ h2[align="center"]:hover {
                     <img src="images\long.jpg" alt="Achievement 6" class="achievement-img">
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description"> National-level athlete in long jump and secured the 2nd position at the National Championship held in Delhi in 2020. </p>
+                    <p class="achievement-description"> National-level athlete in long jump and secured the 2nd position
+                        at the National Championship held in Delhi in 2020. </p>
                 </div>
             </div>
         </div>
@@ -1375,7 +1478,8 @@ h2[align="center"]:hover {
                     <img src="images\shre2.jpg" alt="Certificate 3" class="certificate-img">
                 </div>
                 <div class="certificate-content">
-                    <p class="certificate-description">Certified in Data Structures And Algorithms (Java) - Sheryians Coding School</p>
+                    <p class="certificate-description">Certified in Data Structures And Algorithms (Java) - Sheryians
+                        Coding School</p>
                 </div>
             </div>
             <!-- Certificate 3 -->
@@ -1429,12 +1533,12 @@ h2[align="center"]:hover {
                     <p class="certificate-description">Certificate of Participation - Unstop</p>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <br>
     <br>
-    
+
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="container1">
@@ -1446,26 +1550,27 @@ h2[align="center"]:hover {
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
-                    
+
                     <!-- Email Field -->
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
-    
+
                     <!-- Message Field -->
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="5"
+                            required></textarea>
                     </div>
-    
+
                     <!-- Submit Button -->
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
-    
+
     <footer align="center" style="padding: 2rem; background-color: #f4f4f4; transition: all 0.3s ease;">
         <p style="font-size: 1.1rem; color: #333; transition: all 0.3s ease;">Made with ❤️ by Shruti 😊</p>
     </footer>
@@ -1476,7 +1581,7 @@ h2[align="center"]:hover {
             color: #000;
         }
     </style>
-    
+
 
     <!-- JavaScript to Toggle the Navbar and Add Scroll Animations -->
     <script>
@@ -1490,7 +1595,7 @@ h2[align="center"]:hover {
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
@@ -1500,7 +1605,7 @@ h2[align="center"]:hover {
         }, observerOptions);
 
         // Observe all sections and cards
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Animate sections
             const sections = document.querySelectorAll('section');
             sections.forEach((section, index) => {
